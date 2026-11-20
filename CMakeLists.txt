@@ -1,13 +1,8 @@
-cmake_minimum_required(VERSION 3.16)
-project(dyn_pole_funkce LANGUAGES C)
-
-set(CMAKE_C_STANDARD 11)
-set(CMAKE_C_STANDARD_REQUIRED ON)
-
 add_executable(program
-    main.c
-    array.c
-    menu.c
+    src/main.c
+    src/array.c
+    src/menu.c
 )
 
+target_include_directories(program PRIVATE include)
 target_compile_options(program PRIVATE -Wall -Wextra)
